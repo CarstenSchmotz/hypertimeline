@@ -1,0 +1,8 @@
+match 
+    $e-td isa time_domain_entry; 
+    $l-td isa time_domain_entry;
+    $e_data(time_data: $e-ts, entry: $e-td) isa time_data_in_entry;
+    $l_data(time_data: $l-ts, entry: $l-td) isa time_data_in_entry;
+    $lt (earlier:$e-td, later:$l-td) isa global_ordering;
+get $e-td, $l-td, $lt, $e-ts, $l-ts;
+

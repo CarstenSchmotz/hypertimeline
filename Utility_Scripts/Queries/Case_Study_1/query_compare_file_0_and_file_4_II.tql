@@ -1,0 +1,10 @@
+#This file is part of the Hypertimeline Project
+#February 2024
+
+match 
+    $entry_A isa time_domain_entry, has time_domain_reference "Created", has value_datetime 2023-12-21T15:00:05, has value_datetime $value_A;
+    $entry_B isa time_domain_entry, has time_domain_reference "ID", has value_long 40, has value_long $value_B;
+    $lt isa global_ordering;
+    {$lt (earlier:$entry_A, later:$entry_B) isa global_ordering;} or {$lt (later:$entry_A, earlier:$entry_B) isa global_ordering;};
+    
+get $entry_A, $value_A, $entry_B, $value_B, $lt;

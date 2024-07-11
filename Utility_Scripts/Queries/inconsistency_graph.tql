@@ -1,0 +1,12 @@
+match 
+    $entry_A isa time_domain_entry, has time_domain_reference $ref_A;
+    $entry_B isa time_domain_entry, has time_domain_reference $ref_B;
+    $val_A_conn (entry:$entry_A, time_data:$val_A) isa time_data_in_entry;
+    $val_B_conn (entry:$entry_B, time_data:$val_B) isa time_data_in_entry; 
+    #$entry_A isa time_domain_entry, has time_domain_reference $ref_A, has value_long $val_A;
+    #$entry_B isa time_domain_entry, has time_domain_reference $ref_B, has value_long $val_B;
+    $lt1 (later:$entry_A, earlier:$entry_B) isa global_ordering;
+    $lt2 (earlier:$entry_A, later:$entry_B) isa global_ordering;
+    
+get $entry_A, $entry_B, $lt1, $lt2, $val_A, $val_B, $ref_A, $ref_B;
+#fetch $lt1;

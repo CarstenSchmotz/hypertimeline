@@ -1,0 +1,10 @@
+#This file is part of the Hypertimeline Project
+#February 2024
+
+match 
+    $entry_A isa time_domain_entry, has time_domain_reference "sent_time", has value_datetime 2016-05-26T19:48:47, has value_datetime $value_A;
+    $entry_B isa time_domain_entry, has time_domain_reference "received_time", has value_datetime 2016-05-26T17:25:11, has value_datetime $value_B;
+    $lt isa global_ordering;
+    {$lt (earlier:$entry_A, later:$entry_B) isa global_ordering;} or {$lt (later:$entry_A, earlier:$entry_B) isa global_ordering;};
+    
+get $entry_A, $value_A, $entry_B, $value_B, $lt;

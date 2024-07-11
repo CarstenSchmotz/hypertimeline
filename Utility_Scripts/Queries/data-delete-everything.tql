@@ -1,0 +1,12 @@
+#This file is part of the Hypertimeline Project
+#February 2024
+
+match $e isa entity; delete $e isa entity;
+match $a isa attribute; delete $a isa attribute;
+match $r isa relation; delete $r isa relation;
+
+match
+$a isa attribute;
+not {$x has $a;};
+delete
+$a isa attribute;
