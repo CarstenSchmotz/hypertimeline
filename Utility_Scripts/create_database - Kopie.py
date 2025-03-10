@@ -1,5 +1,4 @@
 from typedb.driver import *
-from typedb.client import *
 import os
 
 PATH_TO_SCHEMA = os.path.join(os.path.dirname(os.path.abspath(__file__)) , "Queries/schema-hypertimelining.tql"  )
@@ -7,8 +6,10 @@ DB_NAME = "Hypertimelining_III"
 username = "admin"
 password = "password"
 ##driver = TypeDB.core_driver("127.0.0.1:1729")
-#with TypeDB.core_driver("localhost:1729") as driver:
-with TypeDB.core_driver("localhost:1729", Credentials(username, password), DriverOptions(False, None)) as driver: 
+#with TypeDB.core_driver("localhost:1729") as driver: #orginal
+#with TypeDB.core_driver("localhost:1729", Credentials(username, password)) as driver: #only 1 missing error 
+#with TypeDB.core_driver("localhost:1729", Credentials(username, password), DriverOptions(False,None)) as driver:
+with TypeDB.core_driver("localhost:1729", Credentials(username, password)) as driver: 
     print("Connecting to the server")
 
     # Delete Database if existent
