@@ -9,7 +9,7 @@ password = "password"
 #with TypeDB.core_driver("localhost:1729") as driver: #orginal
 #with TypeDB.core_driver("localhost:1729", Credentials(username, password)) as driver: #only 1 missing error 
 #with TypeDB.core_driver("localhost:1729", Credentials(username, password), DriverOptions(False,None)) as driver:
-with TypeDB.core_driver("localhost:1729", Credentials(username, password)) as driver: 
+with TypeDB.core_driver("localhost:1729", Credentials(username, password), DriverOptions()) as driver: 
     print("Connecting to the server")
 
     # Delete Database if existent
