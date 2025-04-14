@@ -1,0 +1,7 @@
+first start typedb Server exakt Folder is missing 
+cd .\typedb-all-windows-x86_64-2.25.7\   
+.\typedb.bat server                                                                                                                             
+
+
+insert data numbers are the columns and after the = its the formattype
+c:\Users\carst\Documents\venvName\Scripts\python.exe "\Utility_Scripts\Example_Data\Case_Study_1_FAT_Data_with_Time_Manipulation.tsv" 5=datetime 10=long 12=long -c 5,10,12
