@@ -1,7 +1,22 @@
-first start typedb Server exakt Folder is missing 
-cd .\typedb-all-windows-x86_64-2.25.7\   
-.\typedb.bat server                                                                                                                             
+first activated enviroment
+ C:\Users\carst\Documents\venvName\Scripts\Activate.ps1  
+
+start typedb Server exakt Folder is missing 
+   
+C:\Users\carst\Documents\typedb-all-windows-x86_64-2.25.7\typedb-all-windows-x86_64-2.25.7\typedb.bat server
+#.\typedb.bat server                                                                                                                             
+
+created database 
+c:/Users/carst/Documents/venvName/Scripts/python.exe c:/Users/carst/Documents/GitHub/hypertimeline/Utility_Scripts/create_database.py
 
 
+foo@bar:~$ python3 Utility_Scripts/create_database.py
 insert data numbers are the columns and after the = its the formattype
-c:\Users\carst\Documents\venvName\Scripts\python.exe "\Utility_Scripts\Example_Data\Case_Study_1_FAT_Data_with_Time_Manipulation.tsv" 5=datetime 10=long 12=long -c 5,10,12
+c:\Users\carst\Documents\venvName\Scripts\python.exe .\ingest_module.py "\Utility_Scripts\Example_Data\Case_Study_1_FAT_Data_with_Time_Manipulation.tsv" 5=datetime 10=long 12=long -c 5,10,12
+
+test 
+c:\Users\carst\Documents\venvName\Scripts\python.exe "C:\Users\carst\Documents\GitHub\hypertimeline\mytestdata\test_histroy.tsv" 2=Long 3=datetime #-c 2,3
+you Need an .tsv
+
+test of inconsitency
+c:\Users\carst\Documents\venvName\Scripts\python.exe .\Utility_Scripts\detect_inconsistency.py  
