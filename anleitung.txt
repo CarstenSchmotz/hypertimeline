@@ -20,3 +20,15 @@ you Need an .tsv
 
 test of inconsitency
 c:\Users\carst\Documents\venvName\Scripts\python.exe .\Utility_Scripts\detect_inconsistency.py  
+
+
+
+Erklärung befehel ingest_module
+parser = argparse.ArgumentParser(description='Inserts time domains and time domain entries into the database.')
+parser.add_argument('filename', metavar='f', help='the .tsv file that contains the time domains and their entries')
+parser.add_argument('time_domains', nargs="+", help="Specify which columns contain time domains and their data type, e.g., 1=datetime 2=long", metavar="COL_NUMBER=TYPE")
+parser.add_argument('-db', '--database', dest='database_name', help="Specify the database's name", default="Hypertimelining_III")
+parser.add_argument('-c', '--coincidence', dest='coincidences_string', help="Specify the time domains with coincidence using a,b,c")
+parser.add_argument('-p', '--precedence', dest='precedences_string', help="Specify the time domains with precedence using a<b")
+parser.add_argument('-e', '--encoding', dest='encoding', default="utf-16", help="Specify the encoding used in the .tsv file, default: utf-16")
+parser.add_argument('-t', '--timestamp-format', dest='timestamp_format_string', default="%d/%m/%Y  %H:%M:%S", help="Specify the format string used for the timestamps in the .tsv file, default: %d/%m/%Y  %H:%M:%S, shortcut for sqlite-file-example: 'firefox'")
