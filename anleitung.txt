@@ -16,7 +16,7 @@ c:/Users/carst/Documents/venvName/Scripts/python.exe c:/Users/carst/Documents/Gi
 
 
 foo@bar:~$ python3 Utility_Scripts/create_database.py
-insert data numbers are the columns and after the = its the formattype
+insert data numbers are the columns and after the = its the formattype and it used utf-16 as default
 c:\Users\carst\Documents\venvName\Scripts\python.exe .\ingest_module.py "\Utility_Scripts\Example_Data\Case_Study_1_FAT_Data_with_Time_Manipulation.tsv" 5=datetime 10=long 12=long -c 5,10,12
 
 c:\Users\carst\Documents\venvName\Scripts\python.exe ingest_module.py "mytestdata\extracted_history_utf8_bom.tsv" 0=long 2=long 3=long 4=datetime -c 0,2,3,4
@@ -24,6 +24,7 @@ c:\Users\carst\Documents\venvName\Scripts\python.exe ingest_module.py "mytestdat
 test 
 c:\Users\carst\Documents\venvName\Scripts\python.exe "C:\Users\carst\Documents\GitHub\hypertimeline\mytestdata\test_histroy.tsv" 2=Long 3=datetime #-c 2,3
 you Need an .tsv
+c:\Users\carst\Documents\venvName\Scripts\python.exe ingest_module.py "Utility_Scripts/Example_Data/Precedence_Example.tsv" 1=datetime 2=datetime -p "1<2" -t firefox
 
 test of inconsitency
 c:\Users\carst\Documents\venvName\Scripts\python.exe .\Utility_Scripts\detect_inconsistency.py  
