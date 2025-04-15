@@ -6,7 +6,12 @@ start typedb Server exakt Folder is missing
 C:\Users\carst\Documents\typedb-all-windows-x86_64-2.25.7\typedb-all-windows-x86_64-2.25.7\typedb.bat server
 #.\typedb.bat server                                                                                                                             
 
-created database 
+start console for typedb to interact
+C:\Users\carst\Documents\typedb-all-windows-x86_64-2.25.7\typedb-all-windows-x86_64-2.25.7\typedb.bat console
+
+database list list all database
+
+created database only once
 c:/Users/carst/Documents/venvName/Scripts/python.exe c:/Users/carst/Documents/GitHub/hypertimeline/Utility_Scripts/create_database.py
 
 
@@ -14,6 +19,8 @@ foo@bar:~$ python3 Utility_Scripts/create_database.py
 insert data numbers are the columns and after the = its the formattype
 c:\Users\carst\Documents\venvName\Scripts\python.exe .\ingest_module.py "\Utility_Scripts\Example_Data\Case_Study_1_FAT_Data_with_Time_Manipulation.tsv" 5=datetime 10=long 12=long -c 5,10,12
 
+c:\Users\carst\Documents\venvName\Scripts\python.exe ingest_module.py "mytestdata\extracted_history_utf8_bom.tsv" 0=long 2=long 3=long 4=datetime -c 0,2,3,4
+c:\Users\carst\Documents\venvName\Scripts\python.exe ingest_module.py "mytestdata\extracted_history_utf16.tsv" 0=long 4=datetime -c 0,4 geht schon bessser
 test 
 c:\Users\carst\Documents\venvName\Scripts\python.exe "C:\Users\carst\Documents\GitHub\hypertimeline\mytestdata\test_histroy.tsv" 2=Long 3=datetime #-c 2,3
 you Need an .tsv
