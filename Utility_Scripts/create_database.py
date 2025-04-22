@@ -4,6 +4,7 @@ import os
 PATH_TO_SCHEMA = os.path.join(os.path.dirname(os.path.abspath(__file__)) , "Queries/schema-hypertimelining.tql"  )
 DB_NAME = "Hypertimelining_III"
 
+
 #driver = TypeDB.core_driver("127.0.0.1:1729")
 with TypeDB.core_driver("localhost:1729") as driver:
     print("Connecting to the server")
